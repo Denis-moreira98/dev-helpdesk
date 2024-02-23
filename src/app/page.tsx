@@ -12,7 +12,7 @@ export default function Home() {
             src={heroImg}
             alt="hero Imagem"
             width={600}
-            className="max-w-sm md: max-w-xl"
+            className="max-w-sm md:max-w-xl"
          />
       </main>
    );
