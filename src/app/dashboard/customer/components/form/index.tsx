@@ -53,7 +53,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
             address: data.address,
             userId: userId,
          });
-
+         router.refresh();
          router.replace("/dashboard/customer");
       } catch (err) {
          console.error(err);
@@ -83,7 +83,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
                />
             </div>
             <div className="flex-1">
-               <label className="mb-1 text-lg font-medium">Telefone</label>
+               <label className="mb-1 text-lg font-medium">Email</label>
                <Input
                   type="email"
                   name="email"
