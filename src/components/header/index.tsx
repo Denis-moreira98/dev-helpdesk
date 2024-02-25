@@ -42,7 +42,14 @@ export function Header() {
 
             {status === "authenticated" && (
                <div className="flex flex-row items-center gap-4">
-                  <Link href="/dashboard">
+                  <Link
+                     href="/dashboard"
+                     className="flex flex-row items-center gap-2"
+                  >
+                     <p className="font-medium text-white">
+                        <span>Olá, </span>
+                        {data.user.name?.split(" ")[0]}
+                     </p>
                      <Image
                         src={`${data.user?.image}`}
                         alt={`Avatar ${data.user?.name}`}
