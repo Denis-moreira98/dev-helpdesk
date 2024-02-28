@@ -53,8 +53,9 @@ export function NewCustomerForm({ userId }: { userId: string }) {
             address: data.address,
             userId: userId,
          });
-         router.refresh();
+
          router.replace("/dashboard/customer");
+         router.refresh();
       } catch (err) {
          console.error(err);
       }
