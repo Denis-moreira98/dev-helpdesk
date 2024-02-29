@@ -37,24 +37,28 @@ export default function OpenTicket() {
          <h1 className="font-bold text-3xl mt-24">Abrir chamado</h1>
 
          <main className="flex flex-col mt-4 mb-2">
-            <form className="bg-slate-100 py-6 px-2 rounded border-2">
-               <div className="flex flex-col gap-3">
-                  <Input
-                     name="email"
-                     type="text"
-                     placeholder="Digite o email do cliente..."
-                     error={errors.email?.message}
-                     register={register}
-                  />
-                  <button
-                     type="submit"
-                     className="bg-blue-500 flex flex-row gap-3 px-2 h-11 items-center justify-center text-white font-bold rounded"
-                  >
-                     Procurar clientes
-                     <FiSearch size={24} color="white" />
-                  </button>
-               </div>
-            </form>
+            {customer ? (
+               <div></div>
+            ) : (
+               <form className="bg-slate-100 py-6 px-2 rounded border-2">
+                  <div className="flex flex-col gap-3">
+                     <Input
+                        name="email"
+                        type="text"
+                        placeholder="Digite o email do cliente..."
+                        error={errors.email?.message}
+                        register={register}
+                     />
+                     <button
+                        type="submit"
+                        className="bg-blue-500 flex flex-row gap-3 px-2 h-11 items-center justify-center text-white font-bold rounded"
+                     >
+                        Procurar clientes
+                        <FiSearch size={24} color="white" />
+                     </button>
+                  </div>
+               </form>
+            )}
          </main>
       </div>
    );
