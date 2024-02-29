@@ -14,7 +14,7 @@ interface ModalContextData {
 
 interface TicketInfo {
    ticket: TicketsProps;
-   custumer: CustomerProps | null;
+   customer: CustomerProps | null;
 }
 
 export const modalContext = createContext({} as ModalContextData);
