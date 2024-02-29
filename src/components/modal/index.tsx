@@ -1,14 +1,27 @@
 "use client";
-import { useContext } from "react";
+import { useContext, useRef, MouseEvent } from "react";
 import { modalContext } from "@/providers/modal";
 
 export function ModalTicket() {
    const { handleModalVisible } = useContext(modalContext);
+   const modalRef = useRef<HTMLDivElement | null>(null);
+
+   const handleModalClick = (e: MouseEvent<HTMLDivElement>) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
+         handleModalVisible();
+      }
+   };
 
    return (
-      <section className="absolute bg-gray-900/80 w-full min-h-screen">
+      <div
+         onClick={handleModalClick}
+         className="absolute bg-gray-900/80 w-full min-h-screen"
+      >
          <div className="absolute inset-0 flex items-center justify-center ">
-            <div className="bg-white shadow-lg w-4/5 md:w-1/2 max-w-2xl p-3 rounded">
+            <div
+               ref={modalRef}
+               className="bg-white shadow-lg w-4/5 md:w-1/2 max-w-2xl p-3 rounded"
+            >
                <div className="flex items-center justify-between mb-4">
                   <h1 className="font-bold text-lg md:text-2xl">
                      Detalhes do chamado
@@ -50,6 +63,6 @@ export function ModalTicket() {
                </div>
             </div>
          </div>
-      </section>
+      </div>
    );
 }
