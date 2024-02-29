@@ -14,7 +14,7 @@ interface TicketItemProps {
 }
 
 export function TicketItem({ customer, ticket }: TicketItemProps) {
-   const { handleModalVisible } = useContext(modalContext);
+   const { handleModalVisible, handleDetailTicket } = useContext(modalContext);
    const router = useRouter();
 
    async function handleChangeStatus() {
@@ -31,6 +31,10 @@ export function TicketItem({ customer, ticket }: TicketItemProps) {
 
    function handleOpenModal() {
       handleModalVisible();
+      handleDetailTicket({
+         customer: customer,
+         ticket: ticket,
+      });
    }
 
    return (
