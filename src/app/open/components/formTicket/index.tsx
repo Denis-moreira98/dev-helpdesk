@@ -42,7 +42,7 @@ export function FormTicket({ customer }: FormTicketProps) {
          onSubmit={handleSubmit(handleRegisterTicket)}
          className="bg-slate-200 mt-6 px-4 py-6 rounded border-2"
       >
-         <label className="mb-1 font-medium text-lg">Nome do cliente</label>
+         <label className="mb-1 font-medium text-lg">Nome do chamado</label>
          <Input
             name="name"
             type="text"
@@ -67,7 +67,7 @@ export function FormTicket({ customer }: FormTicketProps) {
             className="bg-blue-500 rounded-md w-full h-11 px-2 text-white font-bold"
             type="submit"
          >
-            Enviar
+            Abrir chamado
          </button>
       </form>
    );

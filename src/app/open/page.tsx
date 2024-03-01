@@ -69,7 +69,7 @@ export default function OpenTicket() {
             {customer ? (
                <div className="bg-slate-200 py-6 px-4 rounded border-2 flex items-center justify-between">
                   <p className="text-lg">
-                     <strong>Cliente Selecionado:</strong>
+                     <strong>Cliente Selecionado: </strong>
                      {customer.name}
                   </p>
                   <button
