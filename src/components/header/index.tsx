@@ -19,7 +19,7 @@ export function Header() {
       <header className="bg-blue-500 w-full flex items-center px-2 py-4  h-20 shadow-md">
          <div className="w-full flex items-center justify-between max-w-7xl mx-auto">
             <Link href="/">
-               <h1 className="font-bold text-2xl pl-1 hover:tracking-widest duration-300">
+               <h1 className="font-bold text-2xl pl-1 hover:tracking-widest duration-300 max-sm:text-xl">
                   <span className="text-white mr-1">DEV</span>HELPDESK
                </h1>
             </Link>
@@ -41,13 +41,13 @@ export function Header() {
             )}
 
             {status === "authenticated" && (
-               <div className="flex flex-row items-center gap-4">
+               <div className="flex flex-row items-center gap-4 max-sm:gap-2">
                   <Link
                      href="/dashboard"
                      className="flex flex-row items-center gap-2"
                   >
-                     <p className="font-medium text-white">
-                        <span>Olá, </span>
+                     <p className="font-medium text-white max-sm:text-sm">
+                        <span className="">Olá, </span>
                         {data.user.name?.split(" ")[0]}
                      </p>
                      <Image
@@ -55,11 +55,11 @@ export function Header() {
                         alt={`Avatar ${data.user?.name}`}
                         width={37}
                         height={37}
-                        className="rounded-full"
+                        className="rounded-full max-sm:h-9 max-sm:w-9"
                      />
                   </Link>
                   <button
-                     className="flex flex-row items-center gap-1 font-semibold text-white border rounded border-gray-300 p-1 hover:scale-105 transition-all duration-300"
+                     className="flex flex-row items-center gap-1 font-semibold text-white border rounded border-gray-300 p-1 hover:scale-105 transition-all duration-300 max-sm:text-sm"
                      onClick={handleLogOut}
                   >
                      Sair
