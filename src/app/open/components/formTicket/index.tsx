@@ -4,7 +4,6 @@ import { Input } from "@/components/input";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { FiSearch, FiX } from "react-icons/fi";
 
 const schema = z.object({
    name: z.string().min(1, "O nome do chamado é obrigatório"),
@@ -24,8 +23,32 @@ export function FormTicket() {
    });
 
    return (
-      <form>
-         <label>Nome do cliente</label>
+      <form className="bg-slate-200 mt-6 px-4 py-6 rounded border-2">
+         <label className="mb-1 font-medium text-lg">Nome do cliente</label>
+         <Input
+            name="name"
+            type="text"
+            placeholder="Digite o nome do chamado"
+            error={errors.name?.message}
+            register={register}
+         />
+         <label className="mb-1 font-medium text-lg">Descreva o problema</label>
+         <textarea
+            className="w-full border-2 rounded-md h-24 resize-none mb-2 px-2"
+            placeholder="Descreva o problema..."
+            id="description"
+            {...register("description")}
+         ></textarea>
+         {errors.description?.message && (
+            <p className="text-red-500 my-1">{errors.description?.message}</p>
+         )}
+
+         <button
+            className="bg-blue-500 rounded-md w-full h-11 px-2 text-white font-bold"
+            type="submit"
+         >
+            Enviar
+         </button>
       </form>
    );
 }
