@@ -5,7 +5,7 @@ import prismaClient from "@/lib/prisma";
 
 export async function GET(request: Request) {
    const { searchParams } = new URL(request.url);
-   const customerEmail = searchParams.get("");
+   const customerEmail = searchParams.get("email");
 
    if (!customerEmail || customerEmail === "") {
       return NextResponse.json(
