@@ -3,8 +3,9 @@ import { Input } from "@/components/input";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { FiSearch } from "react-icons/fi";
+import { FiSearch, FiX } from "react-icons/fi";
 import { useState } from "react";
+import { FormTicket } from "./components/formTicket";
 
 const schema = z.object({
    email: z
@@ -32,15 +33,31 @@ export default function OpenTicket() {
       resolver: zodResolver(schema),
    });
 
+   function handleClearCustomer() {
+      setCustomer(null);
+      setValue("email", "");
+   }
+
    return (
       <div className="w-full max-w-2xl mx-auto px-2">
          <h1 className="font-bold text-3xl mt-24">Abrir chamado</h1>
 
          <main className="flex flex-col mt-4 mb-2">
             {customer ? (
-               <div></div>
+               <div className="bg-slate-200 py-6 px-4 rounded border-2 flex items-center justify-between">
+                  <p className="text-lg">
+                     <strong>Cliente Selecionado:</strong>
+                     {customer.name}
+                  </p>
+                  <button
+                     onClick={handleClearCustomer}
+                     className="bg-red-600 h-11 px-2 flex items-center justify-center rounded"
+                  >
+                     <FiX size={24} color="white" />
+                  </button>
+               </div>
             ) : (
-               <form className="bg-slate-100 py-6 px-2 rounded border-2">
+               <form className="bg-slate-200 py-6 px-2 rounded border-2">
                   <div className="flex flex-col gap-3">
                      <Input
                         name="email"
@@ -59,6 +76,7 @@ export default function OpenTicket() {
                   </div>
                </form>
             )}
+            {customer !== null && <FormTicket />}
          </main>
       </div>
    );
