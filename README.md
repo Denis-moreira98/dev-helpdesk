@@ -1,6 +1,8 @@
-# Dev HelpDesk - Sistema de Gerenciamento de Chamados 👨🏽‍💻
+# Dev HelpDesk - Sistema de Gerenciamento de Chamados
 
 O Dev HelpDesk é um sistema robusto de gerenciamento de chamados projetado para simplificar o acompanhamento e a resolução eficiente de problemas dos clientes. Com funcionalidades que vão desde o cadastro de clientes até a conclusão de chamados, oferece uma solução completa para equipes de suporte.
+
+## [Deploy](https://dev-helpdesk.vercel.app/) 🚀
 
 ![Captura de Tela (274)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/836a6a0f-bc3b-4974-93bb-748162616074)
 
@@ -14,7 +16,7 @@ O Dev HelpDesk é um sistema robusto de gerenciamento de chamados projetado para
 - Modal Detalhado: Visualização detalhada de cada chamado por meio de um modal, proporcionando uma compreensão completa do problema.
 - Exclusão de Cliente: Restrição para a exclusão de clientes que não possuem chamados em aberto, evitando a perda de informações importantes.
 - Conclusão de Chamado: Ao concluir um chamado, ele é removido do painel, mantendo a interface organizada.
-- Abertura de Chamado pelo Cliente: Clientes podem abrir chamados facilmente por meio de um link, simplificando o processo e melhorando a comunicação.
+- Abertura de Chamado pelo Cliente: Clientes podem abrir chamados facilmente por meio de um link, simplificando o processo e melhorando a comunicação. (https://dev-helpdesk.vercel.app/open)
 
 ## Tecnologias Utilizadas 🛠️
 
