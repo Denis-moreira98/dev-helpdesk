@@ -49,6 +49,7 @@ export async function DELETE(request: Request) {
    const findTicket = await prismaClient.ticket.findFirst({
       where: {
          customerId: userId,
+         status: "ABERTO",
       },
    });
 
