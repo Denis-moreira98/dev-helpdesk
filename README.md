@@ -4,7 +4,9 @@ O Dev HelpDesk é um sistema robusto de gerenciamento de chamados projetado para
 
 ## [Deploy](https://dev-helpdesk.vercel.app/) 🚀
 
-![Captura de Tela (274)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/836a6a0f-bc3b-4974-93bb-748162616074)
+![Group 1](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/8dcbc295-bcfc-4367-98a8-d1c4e2db0878)
+
+
 
 
 ## Principais Funcionalidades 👨🏽‍💻🖲️
@@ -30,6 +32,7 @@ O Dev HelpDesk é um sistema robusto de gerenciamento de chamados projetado para
 
 ## Telas
 
+![Captura de Tela (274)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/836a6a0f-bc3b-4974-93bb-748162616074)
 ![Captura de Tela (275)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/5ede2c56-b0a7-42a8-84c1-332efb43ecc5)
 ![Captura de Tela (276)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/81161224-f311-4cd9-a3f9-f1b78c1e25ef)
 ![Captura de Tela (277)](https://github.com/Denis-moreira98/dev-helpdesk/assets/72985107/538a7383-da0e-40e3-88b4-64c817d6e41b)
